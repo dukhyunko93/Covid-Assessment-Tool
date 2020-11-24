@@ -1,12 +1,14 @@
 .nav-container {
     display: flex;
+    justify-content: flex-end;
     align-items: baseline;
-}
-
-.nav-header {
     border-bottom: 4px solid;
 }
 
+.nav-header {
+    
+}
+
 .nav-content {
-    align-self: auto;
+    margin-left: auto;
 }
