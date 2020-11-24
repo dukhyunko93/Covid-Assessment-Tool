@@ -1,0 +1,12 @@
+.nav-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.nav-header {
+    border-bottom: 4px solid;
+}
+
+.nav-content {
+    align-self: auto;
+}

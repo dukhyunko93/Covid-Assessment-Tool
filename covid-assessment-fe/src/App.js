@@ -1,9 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import Nav from './components/Nav.js'
+import './css/App.css';
 
 function App() {
   return (
   <>
+  <Nav />
   <h1>Hello World!</h1>
   </>
   );
