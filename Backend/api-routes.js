@@ -1,30 +1,25 @@
-// Initialize express router
-let router = require('express').Router();
-// Set default API response
-router.get('/', function (req, res) {
-    res.json({
-        status: 'API Its Working',
-        message: 'Welcome to RESTHub crafted with love!',
+module.exports = (app) => {
+  // Initialize express router
+  let router = require("express").Router();
+
+  // Set default API response
+  app.get("/", function (req, res) {
+    res.send({
+      status: "API is Working",
+      message: "Welcome to  COVID ASSESSMENT TOOL",
     });
-});
-// Import contact controller
-var contactController = require('./contactController');
-// Contact routes
-router.route('/contacts')
-    .get(contactController.index)
-    .post(contactController.new);
-router.route('/contacts/:contact_id')
-    .get(contactController.view)
-    .patch(contactController.update)
-    .put(contactController.update)
-    .delete(contactController.delete);
+  });
 
-var covidDataController = require('./covidDataController');
+  //define controller for covidData
+  const covidDataController = require("./controllers/covidDataController");
 
-router.route('/covid_data')
+  router
+    .route("/covid_data")
     .get(covidDataController.index)
     .post(covidDataController.new);
-router.route('/covid_data/:fips')
-    .get(covidDataController.view)
-// Export API routes
-module.exports = router;
+
+  router.route("/covid_data/:fips").get(covidDataController.view);
+
+  //prefix route with api
+  app.use("/api", router);
+};

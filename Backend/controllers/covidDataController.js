@@ -1,4 +1,4 @@
-CovidData = require('./covidDataModel');
+const CovidData = require('../models/covidDataModel');
 const request = require('request');
 const readline = require('readline');
 const fs = require('fs')
