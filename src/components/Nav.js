@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from '@material-ui/core';
+import Searchbar from './Searchbar'
 import "../css/Nav.css";
 
 const Nav = () => {
@@ -12,6 +13,7 @@ const Nav = () => {
           <Button className="sign-up">Sign Up </Button>
         </div>
       </div>
+      <Searchbar />
     </>
   );
 };
