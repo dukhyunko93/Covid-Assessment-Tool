@@ -1,4 +1,3 @@
-import React, { useRef }from "react";
 import SearchIcon from '@material-ui/icons/Search';
 import Autocomplete from './Autocomplete'
 import styled from 'styled-components';
